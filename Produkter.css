@@ -1,0 +1,22 @@
+body {
+    font-family: 'Roboto', sans-serif;
+  }
+  
+  h1 {
+    font-family: 'Poppins', sans-serif;
+  }
+  
+  footer {
+    background-color: #343a40;
+    color: white;
+    padding: 1rem 0;
+  }
+  
+  .card-title {
+    font-family: 'Poppins', sans-serif;
+  }
+  
+  .card-text {
+    font-family: 'Roboto', sans-serif;
+  }
+  

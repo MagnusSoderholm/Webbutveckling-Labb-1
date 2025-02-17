@@ -1,30 +1,30 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="sv">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Produkter - Floristens Blomsterhörna</title>
+  <title>Produkter - Florist Javisst</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&family=Roboto&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles/products.css">
+  <link rel="stylesheet" href="Produkter.css">
 </head>
 <body>
-  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
     <div class="container-fluid">
-      <a class="navbar-brand" href="#">Floristens Blomsterhörna</a>
+      <a class="navbar-brand " href="#">Florist Javisst</a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav">
           <li class="nav-item">
-            <a class="nav-link" href="Startsida.html">Hem</a>
+            <a class="nav-link active" href="Startsida.html">Hem</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="Om Oss.html">Om oss</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link active" href="Produkter.html">Produkter</a>
+            <a class="nav-link" href="Produkter.html">Produkter</a>
           </li>
         </ul>
       </div>
@@ -32,20 +32,20 @@
   </nav>
 
   <main class="container py-5">
-    <h1 class="mb-4" style="font-family: 'Poppins', sans-serif;">Våra produkter</h1>
+    <h1 class="mb-4">Våra produkter</h1>
     <div id="product-list" class="row"></div>
   </main>
 
   <footer class="text-center py-4 bg-dark text-white">
-    <p>&copy; 2023 Floristens Blomsterhörna</p>
+    <p>&copy; 2025 Florist Javisst</p>
   </footer>
 
   <script src="js/cart.js"></script>
   <script>
     const products = [
-      { name: "Röd Rosbukett", price: 249, image: "images/roses.jpg" },
-      { name: "Vårblomsterarrangemang", price: 399, image: "images/spring-flowers.jpg" },
-      { name: "Sommarängbukett", price: 299, image: "images/summer-bouquet.jpg" }
+      { name: "Röd Rosbukett", price: 249, image: "https://internetflorist.b-cdn.net/v4/images_flowers/big/-10825-31176.webp?width=350&contrast=5&sharpen=true" },
+      { name: "Vårblomsterarrangemang", price: 399, image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRMvg695NbEvvuEjbFo4LQOkoAzxqXIUdqS_Q&s" },
+      { name: "Sommarängbukett", price: 299, image: "https://internetflorist.b-cdn.net/v4/images_flowers/big/whimsical-gerbera-delphinium-and-roses-bouquet-885-11889.webp?width=350&contrast=5&sharpen=true" }
     ];
 
     const productContainer = document.getElementById('product-list');

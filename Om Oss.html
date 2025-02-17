@@ -1,27 +1,27 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="sv">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Om oss - Florist Javisst</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&family=Roboto&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles/about.css">
+  <link rel="stylesheet" href="Om Oss.css">
 </head>
 <body>
-  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
     <div class="container-fluid">
-      <a class="navbar-brand" href="#">Florist Javisst</a>
+      <a class="navbar-brand " href="#">Florist Javisst</a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav">
           <li class="nav-item">
-            <a class="nav-link" href="Startsida.html">Hem</a>
+            <a class="nav-link active" href="Startsida.html">Hem</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link active" href="Om Oss.html">Om oss</a>
+            <a class="nav-link" href="Om Oss.html">Om oss</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="Produkter.html">Produkter</a>
@@ -30,18 +30,17 @@
       </div>
     </div>
   </nav>
-
   <main class="container py-5">
-    <h1 class="mb-4" style="font-family: 'Poppins', sans-serif;">Om Florist Javisst</h1>
-    <p style="font-family: 'Roboto', sans-serif;">Florist Javisst har erbjudit vackra blommor och arrangemang i flera år. Vi brinner för att skapa blomsterupplevelser som sprider glädje.</p>
-    <h2 class="mt-5" style="font-family: 'Poppins', sans-serif;">Kontaktuppgifter</h2>
+    <h1 class="mb-4">Om Florist Javisst</h1>
+    <p>Florist Javisst har erbjudit vackra blommor och arrangemang i flera år. Vi brinner för att skapa blomsterupplevelser som sprider glädje.</p>
+    <h2 class="mt-5">Kontaktuppgifter</h2>
     <ul>
       <li>Telefon: 031-123456</li>
       <li>Email: kontakt@floristjavisst.se</li>
       <li>Adress: Mariaplan 2, 414 71 Göteborg</li>
     </ul>
 
-    <h2 class="mt-5" style="font-family: 'Poppins', sans-serif;">Hitta hit</h2>
+    <h2 class="mt-5">Hitta hit</h2>
     <div id="map" class="mb-4" style="height: 400px; width: 100%;"></div>
   </main>
 
@@ -61,33 +60,5 @@
   </script>
   <script async defer src="https://maps.googleapis.com/maps/api/js?key=DIN_API_NYCKEL&callback=initMap"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-
-  <style>
-    /* Kundvagnsstyling */
-    body {
-      font-family: 'Roboto', sans-serif;
-    }
-
-    main {
-      background-color: #f9f9f9;
-      border-radius: 10px;
-      padding: 2rem;
-      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    }
-
-    nav {
-      margin-bottom: 1rem;
-    }
-
-    h1 {
-      color: #333;
-    }
-
-    #map {
-      border: 2px solid #ddd;
-      border-radius: 5px;
-    }
-  </style>
-
 </body>
 </html>
