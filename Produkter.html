@@ -26,6 +26,9 @@
           <li class="nav-item">
             <a class="nav-link active" href="Produkter.html">Produkter</a>
           </li>
+          <li class="nav-item">
+            <a class="nav-link" href="cart.html" id="cart-link">Kundvagn (<span id="cart-count">0</span>)</a>
+          </li>          
         </ul>
       </div>
     </div>
@@ -33,23 +36,24 @@
 
   <main class="container py-5">
     <h1 class="mb-4">Våra produkter</h1>
-    <div id="product-list" class="row"></div>
+    <div id="product-list" class="row">
+    </div>
   </main>
 
   <footer class="text-center py-4 bg-dark text-white">
     <p>&copy; 2025 Florist Javisst</p>
   </footer>
 
-  <script src="js/cart.js"></script>
   <script>
+    // Definiera produkterna som en global variabel
     const products = [
       { name: "Röd Rosbukett", price: 249, image: "https://internetflorist.b-cdn.net/v4/images_flowers/big/-10825-31176.webp?width=350&contrast=5&sharpen=true" },
       { name: "Vårblomsterarrangemang", price: 399, image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRMvg695NbEvvuEjbFo4LQOkoAzxqXIUdqS_Q&s" },
       { name: "Sommarängbukett", price: 299, image: "https://internetflorist.b-cdn.net/v4/images_flowers/big/whimsical-gerbera-delphinium-and-roses-bouquet-885-11889.webp?width=350&contrast=5&sharpen=true" }
     ];
-
+  
+    // Generera produktkort
     const productContainer = document.getElementById('product-list');
-
     products.forEach(product => {
       productContainer.innerHTML += `
         <div class="card col-md-4 mb-4">
@@ -63,6 +67,10 @@
       `;
     });
   </script>
+  
+
+
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="cart.js"></script>
 </body>
 </html>
