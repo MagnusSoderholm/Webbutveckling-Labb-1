@@ -21,15 +21,19 @@
         2px -2px 0 black, 
         -2px 2px 0 black, 
         2px 2px 0 black;
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
           font-size: 55px;
           background-color: rgba(0, 0, 0, 0); /* Halvtransparent bakgrund */
           padding: 10px;
+          white-space: nowrap; 
 }
 
 .overlay-text-2 {
-    position: absolute;
-          top: 35%;
-          left: 27%;
+  font-family: 'Tangerine', cursive;
+  font-size: 120px;
+    position:absolute;
+          top: 37%;
+          left: 35%;
           transform: translate(-50%, -50%);
           color: white;
           text-shadow: 
@@ -37,9 +41,9 @@
         2px -2px 0 black, 
         -2px 2px 0 black, 
         2px 2px 0 black;
-          font-size: 55px;
           background-color: rgba(0, 0, 0, 0); /* Halvtransparent bakgrund */
           padding: 10px;
+          white-space: nowrap; 
 }
 
 
@@ -47,6 +51,6 @@
 
 .tangerine-text {
     font-family: 'Tangerine', cursive;
-    font-size: 50px; /* Anpassa storleken efter behov */
+    font-size: 50px;
 }
 

@@ -21,10 +21,10 @@
       <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav">
           <li class="nav-item">
-            <a class="nav-link active" href="Startsida.html">Hem</a>
+            <a class="nav-link" href="Startsida.html">Hem</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="Om Oss.html">Om oss</a>
+            <a class="nav-link active" href="Om Oss.html">Om oss</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="Produkter.html">Produkter</a>
@@ -35,7 +35,8 @@
   </nav>
   <main class="container py-5">
     <h1 class="mb-4">Om Florist Javisst</h1>
-    <p>Florist Javisst har erbjudit vackra blommor och arrangemang i flera år. Vi brinner för att skapa blomsterupplevelser som sprider glädje.</p>
+    <p>Florist Javisst grundades av Kalle Karlsson och Pelle Persson i januari 2025 på sin nuvarande adress i hjärtat av Majorna. Vi brinner för att skapa blomsterupplevelser som sprider glädje.</p>
+    <p>Kalle och Per växte upp tillsammans ute på Hisingen och välsignades bägge i tidig ålder med sina "gröna fingrar" och intresse för botanik. De har många års erfarenhet av blomarrangemang.</p>
     <h2 class="mt-5">Kontaktuppgifter</h2>
     <ul>
       <li>Telefon: 031-123456</li>
@@ -56,24 +57,20 @@
 
   <script>
     document.addEventListener('DOMContentLoaded', function() {
-      // Koordinater för Florist Javisst
       var floristLocation = [57.68660, 11.92190];
   
-      // Skapa kartan och centrera den på floristens position
       var map = L.map('map').setView(floristLocation, 14);
-  
-      // Lägg till OpenStreetMap-tiles
+ 
       L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
         attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
       }).addTo(map);
   
-      // Lägg till en markör på floristens position
       L.marker(floristLocation).addTo(map)
         .bindPopup('Florist Javisst')
         .openPopup();
     });
   </script>
   
-  
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
