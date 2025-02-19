@@ -4,3 +4,25 @@
     font-size: 40px;
   }
   
+
+  .cart-img {
+    width: 60px;  /* Mindre bilder */
+    height: auto;
+    border-radius: 5px;
+  }
+  
+  .quantity-controls {
+    display: flex;
+    align-items: center;
+  }
+  
+  .quantity-controls button {
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+  }
+  
+

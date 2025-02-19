@@ -37,41 +37,73 @@
 
   <main class="container py-5">
     <h1 class="mb-4">Våra produkter</h1>
-    <div id="product-list" class="row">
-    </div>
+    <div id="product-list" class="row"></div>
   </main>
 
   <footer class="text-center py-4 bg-dark text-white">
     <p>&copy; 2025 Florist Javisst</p>
   </footer>
 
+  <div id="add-to-cart-message" class="alert alert-success position-fixed bottom-0 end-0 m-3" style="display:none;">
+    Produkt tillagd i kundvagn!
+  </div>
+
   <script>
-    // Definiera produkterna som en global variabel
     const products = [
       { name: "Röd Rosbukett", price: 249, image: "https://internetflorist.b-cdn.net/v4/images_flowers/big/-10825-31176.webp?width=350&contrast=5&sharpen=true" },
       { name: "Vårblomsterarrangemang", price: 399, image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRMvg695NbEvvuEjbFo4LQOkoAzxqXIUdqS_Q&s" },
       { name: "Sommarängbukett", price: 299, image: "https://internetflorist.b-cdn.net/v4/images_flowers/big/whimsical-gerbera-delphinium-and-roses-bouquet-885-11889.webp?width=350&contrast=5&sharpen=true" }
     ];
-  
-    // Generera produktkort
+
     const productContainer = document.getElementById('product-list');
+    const cartCountElement = document.getElementById('cart-count');
+    const addToCartMessage = document.getElementById('add-to-cart-message');
+
+    function updateCartCount() {
+      let cart = JSON.parse(localStorage.getItem('cart')) || [];
+      cartCountElement.textContent = cart.length;
+    }
+
     products.forEach(product => {
-      productContainer.innerHTML += `
-        <div class="card col-md-4 mb-4">
-          <img src="${product.image}" class="card-img-top" alt="${product.name}">
-          <div class="card-body">
-            <h5 class="card-title">${product.name}</h5>
-            <p class="card-text">${product.price} SEK</p>
-            <button class="btn btn-primary add-to-cart">Lägg till i kundvagn</button>
-          </div>
+      const productCard = document.createElement('div');
+      productCard.classList.add('card', 'col-md-4', 'mb-4');
+
+      productCard.innerHTML = `
+        <img src="${product.image}" class="card-img-top" alt="${product.name}">
+        <div class="card-body">
+          <h5 class="card-title">${product.name}</h5>
+          <p class="card-text">${product.price} SEK</p>
+          <button class="btn btn-primary add-to-cart">Lägg till i kundvagn</button>
         </div>
       `;
+
+      productContainer.appendChild(productCard);
+
+      productCard.querySelector('.add-to-cart').addEventListener('click', () => {
+        addToCart(product);
+        showAddToCartMessage();
+        updateCartCount();
+      });
+    });
+
+    function addToCart(product) {
+      let cart = JSON.parse(localStorage.getItem('cart')) || [];
+      cart.push(product);
+      localStorage.setItem('cart', JSON.stringify(cart));
+    }
+
+    function showAddToCartMessage() {
+      addToCartMessage.style.display = 'block';
+      setTimeout(() => {
+        addToCartMessage.style.display = 'none';
+      }, 2000);
+    }
+
+    document.addEventListener("DOMContentLoaded", () => {
+      updateCartCount();
     });
   </script>
-  
-
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-  <script src="Kundvagn.js"></script>
 </body>
 </html>
