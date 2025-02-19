@@ -22,9 +22,19 @@ body {
     border-radius: 5px;
   }
   
-  
+
 .tangerine-title {
     font-family: 'Tangerine', cursive;
     font-size: 40px;
   }
+
+  .font-om {
+    font-family: 'Send Flowers', sans-serif;
+    font-size: 3rem;
+  }
   
+  /* Font för 'Florist Javisst' */
+  .font-florist {
+    font-family: 'Tangerine', cursive;
+    font-size: 4rem;
+  }
