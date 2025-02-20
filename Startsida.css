@@ -1,65 +1,71 @@
 .image-container {
-    position: relative;
-    display: inline-block;
+  position: relative;
+  display: inline-block;
+  width: 100%;
 }
 
 .image-container img {
-    width: 100%;  
-    height: 400px;  
-    object-fit: cover;
-    object-position: top;
+  width: 100%;
+  height: 400px;
+  object-fit: cover;
+  object-position: top;
+}
+
+.overlay-text, 
+.overlay-text-2 {
+  position: absolute;
+  color: white;
+  text-shadow: 
+      -2px -2px 0 black, 
+      2px -2px 0 black, 
+      -2px 2px 0 black, 
+      2px 2px 0 black;
+  background-color: rgba(0, 0, 0, 0);
+  padding: 10px;
+  white-space: nowrap;
 }
 
 .overlay-text {
-    position: absolute;
-          top: 20%;
-          left: 25%;
-          transform: translate(-50%, -50%);
-          color: white;
-          text-shadow: 
-        -2px -2px 0 black, 
-        2px -2px 0 black, 
-        -2px 2px 0 black, 
-        2px 2px 0 black;
-        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-          font-size: 55px;
-          background-color: rgba(0, 0, 0, 0); /* Halvtransparent bakgrund */
-          padding: 10px;
-          white-space: nowrap; 
+  top: 20%;
+  left: 25%;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-size: 55px;
+  transform: translate(-25%, -50%);
 }
 
 .overlay-text-2 {
+  top: 37%;
+  left: 35%;
   font-family: 'Tangerine', cursive;
   font-size: 120px;
-    position:absolute;
-          top: 37%;
-          left: 35%;
-          transform: translate(-50%, -50%);
-          color: white;
-          text-shadow: 
-        -2px -2px 0 black, 
-        2px -2px 0 black, 
-        -2px 2px 0 black, 
-        2px 2px 0 black;
-          background-color: rgba(0, 0, 0, 0); /* Halvtransparent bakgrund */
-          padding: 10px;
-          white-space: nowrap; 
+  transform: translate(-35%, -50%);
 }
 
 
+@media (max-width: 768px) {
+  .overlay-text {
+      font-size: 35px;
+      left: 20%;
+  }
+  .overlay-text-2 {
+      font-size: 80px;
+      left: 30%;
+  }
+}
 
-
-.tangerine-text {
-    font-family: 'Tangerine', cursive;
-    font-size: 50px;
+@media (max-width: 480px) {
+  .overlay-text {
+      font-size: 28px;
+      left: 15%;
+  }
+  .overlay-text-2 {
+      font-size: 60px;
+      left: 25%;
+  }
 }
 
 .tangerine-title {
   font-family: 'Tangerine', cursive;
   font-size: 40px;
-}
-
-body {
-  background-color: #F3E5F5;
-  color: #333;
+  color: aquamarine;
 }
